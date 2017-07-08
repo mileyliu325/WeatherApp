@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Weather View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MLWeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WeatherViewController" customModule="MLWeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="690"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="135" id="VQy-cF-j4e">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="135" id="VQy-cF-j4e" customClass="WeatherTableViewCell" customModule="MLWeatherApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="135"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VQy-cF-j4e" id="v6x-Sp-T24">
@@ -64,6 +64,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="dateLabel" destination="xia-da-O0y" id="6Wd-oc-rFH"/>
+                                            <outlet property="iconImageView" destination="2vR-Oo-TMh" id="FAN-8K-SNO"/>
+                                            <outlet property="tempLabel" destination="WBh-yP-EfI" id="48q-0X-7Rn"/>
                                             <segue destination="JEc-9v-1Ih" kind="show" trigger="accessoryAction" id="4Xe-Em-u0P"/>
                                         </connections>
                                     </tableViewCell>
@@ -77,6 +80,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zes-MT-N9m"/>
+                    <connections>
+                        <outlet property="weatherTableView" destination="eCy-ED-AM0" id="Cbv-yW-fGQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

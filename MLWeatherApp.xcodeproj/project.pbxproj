@@ -16,6 +16,12 @@
 		6B6A1CF41F106AC30072781F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B6A1CF21F106AC30072781F /* LaunchScreen.storyboard */; };
 		6B6A1CFF1F106AC30072781F /* MLWeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6A1CFE1F106AC30072781F /* MLWeatherAppTests.swift */; };
 		6B6A1D0A1F106AC30072781F /* MLWeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6A1D091F106AC30072781F /* MLWeatherAppUITests.swift */; };
+		6B6A1D181F106FBF0072781F /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6A1D171F106FBF0072781F /* WeatherViewController.swift */; };
+		6B6A1D191F106FBF0072781F /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6A1D171F106FBF0072781F /* WeatherViewController.swift */; };
+		6B6A1D1A1F106FBF0072781F /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6A1D171F106FBF0072781F /* WeatherViewController.swift */; };
+		6B6A1D1C1F10700B0072781F /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6A1D1B1F10700B0072781F /* WeatherTableViewCell.swift */; };
+		6B6A1D1D1F10700B0072781F /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6A1D1B1F10700B0072781F /* WeatherTableViewCell.swift */; };
+		6B6A1D1E1F10700B0072781F /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6A1D1B1F10700B0072781F /* WeatherTableViewCell.swift */; };
 		791FB031033A821585D06791 /* Pods_MLWeatherAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA11B67F389A88DC7FD983B /* Pods_MLWeatherAppUITests.framework */; };
 		9327CCB30BB300A6D00728D7 /* Pods_MLWeatherAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8320818350346797A92E044C /* Pods_MLWeatherAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +60,8 @@
 		6B6A1D051F106AC30072781F /* MLWeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLWeatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B6A1D091F106AC30072781F /* MLWeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLWeatherAppUITests.swift; sourceTree = "<group>"; };
 		6B6A1D0B1F106AC30072781F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B6A1D171F106FBF0072781F /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		6B6A1D1B1F10700B0072781F /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
 		7AA9FB4F297FECF1DB3D2392 /* Pods-MLWeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLWeatherApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MLWeatherApp/Pods-MLWeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8320818350346797A92E044C /* Pods_MLWeatherAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLWeatherAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8740A58DC1CA418FD720AE90 /* Pods_MLWeatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLWeatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,7 +149,9 @@
 			children = (
 				6B6A1CE61F106AC30072781F /* AppDelegate.swift */,
 				6B6A1CE81F106AC30072781F /* ViewController.swift */,
+				6B6A1D171F106FBF0072781F /* WeatherViewController.swift */,
 				6B6A1CEA1F106AC30072781F /* Main.storyboard */,
+				6B6A1D1B1F10700B0072781F /* WeatherTableViewCell.swift */,
 				6B6A1CF01F106AC30072781F /* Assets.xcassets */,
 				6B6A1CF21F106AC30072781F /* LaunchScreen.storyboard */,
 				6B6A1CF51F106AC30072781F /* Info.plist */,
@@ -449,7 +459,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B6A1D1C1F10700B0072781F /* WeatherTableViewCell.swift in Sources */,
 				6B6A1CEF1F106AC30072781F /* MLWeatherApp.xcdatamodeld in Sources */,
+				6B6A1D181F106FBF0072781F /* WeatherViewController.swift in Sources */,
 				6B6A1CE91F106AC30072781F /* ViewController.swift in Sources */,
 				6B6A1CE71F106AC30072781F /* AppDelegate.swift in Sources */,
 			);
@@ -459,7 +471,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B6A1D1D1F10700B0072781F /* WeatherTableViewCell.swift in Sources */,
 				6B6A1CFF1F106AC30072781F /* MLWeatherAppTests.swift in Sources */,
+				6B6A1D191F106FBF0072781F /* WeatherViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,7 +481,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B6A1D1E1F10700B0072781F /* WeatherTableViewCell.swift in Sources */,
 				6B6A1D0A1F106AC30072781F /* MLWeatherAppUITests.swift in Sources */,
+				6B6A1D1A1F106FBF0072781F /* WeatherViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,6 +718,7 @@
 				6B6A1D101F106AC30072781F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6B6A1D111F106AC30072781F /* Build configuration list for PBXNativeTarget "MLWeatherAppTests" */ = {
 			isa = XCConfigurationList;
@@ -710,6 +727,7 @@
 				6B6A1D131F106AC30072781F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6B6A1D141F106AC30072781F /* Build configuration list for PBXNativeTarget "MLWeatherAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -718,6 +736,7 @@
 				6B6A1D161F106AC30072781F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
