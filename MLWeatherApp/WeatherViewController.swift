@@ -178,8 +178,28 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
+        var weather : Weather
+        
+        weather = self.data[indexPath.row] as! Weather
+        
         
         var cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as! WeatherTableViewCell
+        
+        //        if(cell == nil){
+        
+        //            cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell") as! WeatherTableViewCell
+        
+        //        }
+        
+        cell.dateLabel.text = changeUTCtoDate(UTCString: weather.time)
+        
+        let tempMin = Int(weather.temperatureMin)
+        let tempMax = Int(weather.temperatureMax)
+        
+        cell.tempLabel.text = String("\(tempMin)°F-\(tempMax)°F")
+        
+        let imageName = imageCase(iconString: weather.icon)
+        cell.iconImageView.image = UIImage(named: imageName)
         
         
         return cell
@@ -193,6 +213,11 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
         let indexPath = tableView.indexPathForSelectedRow!
         
         let cell = tableView.cellForRow(at: indexPath)! as UITableViewCell
+        
+        var weather : Weather
+        
+        weather = self.data[indexPath.row] as! Weather
+        
         
         
         
