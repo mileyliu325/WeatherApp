@@ -14,16 +14,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-MLWeatherAppTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-MLWeatherAppUITests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>SVProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,12 +22,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0354767A28679B8948B163C098B8EB97</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>76363F85784BBEEAFEC25919527EF093</key>
+		<key>45E25383D39408A24A468CC77D329819</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,12 +32,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8B3777ACB58B836B269358218B1A0A7B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E54AB1B68D17BA553ADDD49B08225008</key>
+		<key>D7CF256EB08CDF6CBC861F85ECCA926C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

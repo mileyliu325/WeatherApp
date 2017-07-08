@@ -7,15 +7,37 @@
 //
 
 import UIKit
+import SVProgressHUD
+import Alamofire
 
-class WeatherViewController: UIViewController {
+class WeatherViewController: UIViewController,,UITableViewDelegate,UITableViewDataSource {
+    
+    var data : NSMutableArray = NSMutableArray()
 
+
+    @IBOutlet weak var weatherTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        loadData()
+        self.weatherTableView.delegate=self
+        self.weatherTableView.dataSource=self
         // Do any additional setup after loading the view.
     }
 
+    func loadData(){
+        
+        SVProgressHUD.show()
+        
+        var url : String?
+        url = String(format: "%@", "https://api.darksky.net/forecast/b62e7568029db044941059558da9a1a1/37.8267,-122.4233")
+    
+    
+    
+    
+    
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

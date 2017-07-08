@@ -81,7 +81,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="zes-MT-N9m"/>
                     <connections>
-                        <outlet property="weatherTableView" destination="eCy-ED-AM0" id="Cbv-yW-fGQ"/>
+                        <outlet property="weatherTableView" destination="eCy-ED-AM0" id="ark-sx-mBG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
