@@ -183,7 +183,7 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
         weather = self.data[indexPath.row] as! Weather
         
         
-        var cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as! WeatherTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as! WeatherTableViewCell
         
         //        if(cell == nil){
         
@@ -219,7 +219,7 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
         weather = self.data[indexPath.row] as! Weather
         
         
-        
+        performSegue(withIdentifier:"toDetail", sender: weather as Any)
         
         
         
@@ -236,6 +236,12 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "toDetail"){
+            
+            let nextViewController = segue.destination as! DetailViewController
+            
+            nextViewController.sendData = sender
+        }
         
     }
 
