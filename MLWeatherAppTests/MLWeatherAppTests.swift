@@ -11,20 +11,47 @@ import XCTest
 
 class MLWeatherAppTests: XCTestCase {
     
+    var weatherVC = WeatherViewController()
+    
+    
     override func setUp() {
+        
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        print("Start testing")
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+       
+        print("End testing")
+        
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testDateTransform() {
+        
+        
+        let time = 1499689288
+        
+        let transformed = changeUTCtoDate(UTCString: time)
+        
+        XCTAssert(transformed == "10/07")
+        
     }
+    
+    
+    
+    func testWeatherDataModel() {
+        
+//        let jsonObject =
+//        
+//        }
+        
+//            ["icon":"clear-day", "time":1499695200, "temperatureMin":74.84, "temperatureMax":75.3, "summary":"Clear throughout the day.", "humidity":0.86, "pressure":1016.23 , "windSpeed":8.69 ]
+    
+    
+    }
+    
     
     func testPerformanceExample() {
         // This is an example of a performance test case.

@@ -9,23 +9,23 @@
 import Foundation
 
 //date formatted
-func changeUTCtoDate(UTCString:Int)->String{
+func changeUTCtoDate(UTCString:Int) -> String{
     let sunStr = NSString(format: "%d", UTCString)
     let timer:TimeInterval = sunStr.doubleValue
     let data = NSDate(timeIntervalSince1970: timer)
     
     let formatter = DateFormatter()
     formatter.dateStyle = DateFormatter.Style.short
-    //        formatter.dateFormat = "HH:mm"
     formatter.dateFormat = "dd/MM"
     let str:String = formatter.string(from: data as Date)
     return str
 }
 
-//
+//assign icon for each weather
 func imageCase(iconString:String) ->String{
     switch iconString {
-    case "partly-cloudy-day","partly-cloudy-night":
+   
+    case "partly-cloudy-day", "partly-cloudy-night":
         return "cloudy"
     case "clear-day":
         return "sunny"

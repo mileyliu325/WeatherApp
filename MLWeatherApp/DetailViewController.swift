@@ -27,47 +27,38 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if((sendData) != nil){
+        
+        if((sendData) != nil) {
             drawUI()
         }
     }
-    func drawUI() ->Void{
+    
+    func drawUI() {
         
         
-        let weather = sendData as! Weather
-        print("detail:\(weather.icon)")
+        let weather = sendData as! WeatherData
         
-        self.title =  changeUTCtoDate(UTCString: weather.time)
+        self.title =  changeUTCtoDate(UTCString: weather.time!)
         
-        iconImageView.image = UIImage(named: imageCase(iconString: weather.icon))
+        iconImageView.image = UIImage(named: imageCase(iconString: weather.icon!))
         
-        summaryLabel.text = String("Summary:\(weather.summary)")
         
-        highTempLabel.text = String("Highest Tempature: \(Int(weather.temperatureMax))°F")
+        summaryLabel.text = String("Summary:\(weather.summary!)")
         
-        lowTempLabel.text = String("Lowest Tempature: \(Int(weather.temperatureMin))°F")
+        highTempLabel.text = String("Highest Tempature: \(Int(weather.temperatureMax!))°F")
         
-        humidityLabel.text = String("Humidity: \(Int(weather.humidity*100))%")
+        lowTempLabel.text = String("Lowest Tempature: \(Int(weather.temperatureMin!))°F")
         
-        pressureLabel.text = String("Pressure: \(Int(weather.pressure))hPa")
+        humidityLabel.text = String("Humidity: \(Int(weather.humidity!*100))%")
         
-        windSpeedLabel.text = String("Wind Speed : \(Int(weather.windSpeed))m/s")
+        pressureLabel.text = String("Pressure: \(Int(weather.pressure!))hPa")
+        
+        windSpeedLabel.text = String("Wind Speed : \(Int(weather.windSpeed!))m/s")
         
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+       
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

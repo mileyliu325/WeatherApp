@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		205F5FF6E21D3FF6DCED58A9 /* Pods_MLWeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8740A58DC1CA418FD720AE90 /* Pods_MLWeatherApp.framework */; };
 		6B6A1CE71F106AC30072781F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6A1CE61F106AC30072781F /* AppDelegate.swift */; };
-		6B6A1CE91F106AC30072781F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6A1CE81F106AC30072781F /* ViewController.swift */; };
 		6B6A1CEC1F106AC30072781F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B6A1CEA1F106AC30072781F /* Main.storyboard */; };
 		6B6A1CEF1F106AC30072781F /* MLWeatherApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6B6A1CED1F106AC30072781F /* MLWeatherApp.xcdatamodeld */; };
 		6B6A1CF11F106AC30072781F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B6A1CF01F106AC30072781F /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 		6B6A1D0A1F106AC30072781F /* MLWeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6A1D091F106AC30072781F /* MLWeatherAppUITests.swift */; };
 		6B6A1D181F106FBF0072781F /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6A1D171F106FBF0072781F /* WeatherViewController.swift */; };
 		6B6A1D1C1F10700B0072781F /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6A1D1B1F10700B0072781F /* WeatherTableViewCell.swift */; };
-		6BBA042B1F10748100AB6848 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBA042A1F10748100AB6848 /* Weather.swift */; };
 		6BBA04331F1078B200AB6848 /* tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBA04321F1078B200AB6848 /* tools.swift */; };
 		6BBA04371F107BEC00AB6848 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBA04361F107BEC00AB6848 /* DetailViewController.swift */; };
 		6BBA04781F133C7400AB6848 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBA04771F133C7400AB6848 /* WeatherData.swift */; };
@@ -49,7 +47,6 @@
 		53A7DFECE78584B0650F5B5B /* Pods-MLWeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLWeatherApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MLWeatherApp/Pods-MLWeatherApp.release.xcconfig"; sourceTree = "<group>"; };
 		6B6A1CE31F106AC30072781F /* MLWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MLWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B6A1CE61F106AC30072781F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6B6A1CE81F106AC30072781F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6B6A1CEB1F106AC30072781F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6B6A1CEE1F106AC30072781F /* MLWeatherApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MLWeatherApp.xcdatamodel; sourceTree = "<group>"; };
 		6B6A1CF01F106AC30072781F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,7 +60,6 @@
 		6B6A1D0B1F106AC30072781F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B6A1D171F106FBF0072781F /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		6B6A1D1B1F10700B0072781F /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
-		6BBA042A1F10748100AB6848 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		6BBA042E1F10761D00AB6848 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/MLWeatherApp-aefpsptdthwkyedijhrftlfdzfml/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		6BBA04301F10762300AB6848 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = "Pods/../build/Debug-iphoneos/SVProgressHUD/SVProgressHUD.framework"; sourceTree = "<group>"; };
 		6BBA04321F1078B200AB6848 /* tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tools.swift; sourceTree = "<group>"; };
@@ -158,13 +154,11 @@
 			isa = PBXGroup;
 			children = (
 				6B6A1CE61F106AC30072781F /* AppDelegate.swift */,
-				6B6A1CE81F106AC30072781F /* ViewController.swift */,
 				6B6A1D171F106FBF0072781F /* WeatherViewController.swift */,
+				6BBA04361F107BEC00AB6848 /* DetailViewController.swift */,
+				6B6A1D1B1F10700B0072781F /* WeatherTableViewCell.swift */,
 				6BBA04771F133C7400AB6848 /* WeatherData.swift */,
 				6B6A1CEA1F106AC30072781F /* Main.storyboard */,
-				6BBA04361F107BEC00AB6848 /* DetailViewController.swift */,
-				6BBA042A1F10748100AB6848 /* Weather.swift */,
-				6B6A1D1B1F10700B0072781F /* WeatherTableViewCell.swift */,
 				6B6A1CF01F106AC30072781F /* Assets.xcassets */,
 				6B6A1CF21F106AC30072781F /* LaunchScreen.storyboard */,
 				6B6A1CF51F106AC30072781F /* Info.plist */,
@@ -381,8 +375,6 @@
 				6B6A1D1C1F10700B0072781F /* WeatherTableViewCell.swift in Sources */,
 				6B6A1CEF1F106AC30072781F /* MLWeatherApp.xcdatamodeld in Sources */,
 				6B6A1D181F106FBF0072781F /* WeatherViewController.swift in Sources */,
-				6B6A1CE91F106AC30072781F /* ViewController.swift in Sources */,
-				6BBA042B1F10748100AB6848 /* Weather.swift in Sources */,
 				6B6A1CE71F106AC30072781F /* AppDelegate.swift in Sources */,
 				6BBA04781F133C7400AB6848 /* WeatherData.swift in Sources */,
 				6BBA04371F107BEC00AB6848 /* DetailViewController.swift in Sources */,
@@ -480,7 +472,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -524,7 +516,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
