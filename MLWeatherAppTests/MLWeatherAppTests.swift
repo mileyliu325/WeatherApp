@@ -41,14 +41,11 @@ class MLWeatherAppTests: XCTestCase {
     
     
     
-    func testWeatherDataModel() {
+    func testImageCase() {
         
-//        let jsonObject =
-//        
-//        }
+        let String  = "clear-day"
         
-//            ["icon":"clear-day", "time":1499695200, "temperatureMin":74.84, "temperatureMax":75.3, "summary":"Clear throughout the day.", "humidity":0.86, "pressure":1016.23 , "windSpeed":8.69 ]
-    
+        XCTAssert(imageCase(iconString: String) == "sunny")
     
     }
     

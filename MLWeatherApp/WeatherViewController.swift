@@ -36,22 +36,21 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         Alamofire.request(url!)
             .validate()
-            .responseJSON {
-                response in
+            .responseJSON {response in
                 switch response.result {
-                case .success(let value):
+                    case .success(let value):
                     
-                    let daily = (value as! [String:Any]) ["daily"] as! [String:Any]
-                    let data = daily ["data"] as! [Any]
+                        let daily = (value as! [String:Any]) ["daily"] as! [String:Any]
+                        let data = daily ["data"] as! [Any]
                    
-                    for index in stride(from: 0, to: data.count, by: 1){
+                        for index in stride(from: 0, to: data.count, by: 1){
                         
-                         let weather = data[index] as! [String:Any]
-                         let weatherData = Mapper<WeatherData>().map(JSONObject: weather)
+                            let weather = data[index] as! [String:Any]
+                            let weatherData = Mapper<WeatherData>().map(JSONObject: weather)
                         
-                         self.data.add(weatherData as Any)
-                    }
-                    self.weatherTableView.reloadData()
+                            self.data.add(weatherData as Any)
+                        }
+                        self.weatherTableView.reloadData()
                    
                     SVProgressHUD.dismiss()
                     
@@ -71,11 +70,9 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // MARK: - Tableview delegate
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-    
+   
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       
         return self.data.count
         
     }
@@ -119,15 +116,10 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
    
     }
     
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "toDetail"){
+        if segue.identifier == "toDetail"{
             
             let nextViewController = segue.destination as! DetailViewController
             

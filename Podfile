@@ -10,7 +10,7 @@ target 'MLWeatherApp' do
     # API
     pod 'Alamofire'
     pod 'AlamofireObjectMapper'
-    pod 'SwiftyJSON'
+   
     
     # alert effect
     pod 'SVProgressHUD'

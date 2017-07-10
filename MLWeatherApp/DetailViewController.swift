@@ -29,6 +29,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         
         if((sendData) != nil) {
+            
             drawUI()
         }
     }

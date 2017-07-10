@@ -9,6 +9,7 @@
 import XCTest
 
 class MLWeatherAppUITests: XCTestCase {
+    let app = XCUIApplication()
         
     override func setUp() {
         super.setUp()
@@ -30,18 +31,16 @@ class MLWeatherAppUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testWeatherList() {
-    
-       
-        
-//        let svprogresshudElement = XCUIApplication().otherElements["SVProgressHUD"]
-//        svprogresshudElement.tap()
-       
+    func TapCell() {
+
+        let cells = app.tables.cells
+        cells.element(boundBy: 0).tap()
         
     }
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func backNavigationTap() {
+    
+        app.navigationBars["10/07"].buttons["MLWeatherApp"].tap()
+        
     }
     
 }
