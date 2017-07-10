@@ -1,15 +1,22 @@
 PODS:
   - Alamofire (4.2.0)
+  - AlamofireObjectMapper (4.0.1):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 2.0)
+  - ObjectMapper (2.2.2)
   - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
   - Alamofire
+  - AlamofireObjectMapper
   - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
+  AlamofireObjectMapper: 842d2eed43a4d0593ff0110d54ac86a170c4519c
+  ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: b6d068a56503da93b45801d8fc3347d4b9ec2109
+PODFILE CHECKSUM: 1bd6888f5a4dff0238421fc4a8187ebeaa23e470
 
 COCOAPODS: 1.1.1

@@ -9,6 +9,7 @@ target 'MLWeatherApp' do
     
     # API
     pod 'Alamofire'
+    pod 'AlamofireObjectMapper'
     
     # alert effect
     pod 'SVProgressHUD'

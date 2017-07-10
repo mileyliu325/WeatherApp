@@ -10,7 +10,7 @@ import UIKit
 import SVProgressHUD
 import Alamofire
 
-class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var data : NSMutableArray = NSMutableArray()
 
@@ -20,10 +20,9 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
         super.viewDidLoad()
         
         loadData()
-        self.weatherTableView.delegate=self
-        self.weatherTableView.dataSource=self
-        // Do any additional setup after loading the view.
-    }
+        self.weatherTableView.delegate = self
+        self.weatherTableView.dataSource = self
+            }
 
     func loadData(){
         
@@ -32,7 +31,6 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
         var url : String?
         url = String(format: "%@", "https://api.darksky.net/forecast/b62e7568029db044941059558da9a1a1/37.8267,-122.4233")
         
-       
         Alamofire.request(url!)
             .validate()
             .responseJSON {
@@ -52,8 +50,6 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
                 
                 if let result = response.result.value {
                     
-                    print(result)
-                    
                     //get daily temperature
                     var resultArray : NSArray = NSArray()
                     
@@ -66,11 +62,8 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
                             
                             let dailyData = dailyResultDic.object(forKey: "data")
                             
-                            print("dailyData:\(dailyData)")
-                            
                             resultArray = dailyData as! NSArray
                             
-                            print("resultArray1:\(resultArray.count)")
                             
                         }
                         else {
@@ -84,10 +77,6 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
                         print("sever problem")
                     }
                     
-                    
-                    
-                    print("resultArray2:\(resultArray.count)")
-                    
                     if resultArray.count == 0
                     {
                         SVProgressHUD.dismiss()
@@ -99,37 +88,21 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
                         
                         let icon = (resultArray[index] as! NSDictionary).object(forKey: "icon")
                         
-                        print("icon:\(icon)")
-                        
                         let time = (resultArray[index] as! NSDictionary).object(forKey: "time")
-                        
-                        print("time:\(time)")
                         
                         let temperatureMin = (resultArray[index] as! NSDictionary).object(forKey: "temperatureMin")
                         
-                        print("temperatureMin:\(temperatureMin)")
-                        
                         let temperatureMax = (resultArray[index] as! NSDictionary).object(forKey: "temperatureMax")
-                        
-                        print("temperatureMax:\(temperatureMax)")
                         
                         let summary = (resultArray[index] as! NSDictionary).object(forKey: "summary")
                         
-                        print("summary:\(summary)")
-                        
                         let humidity = (resultArray[index] as! NSDictionary).object(forKey: "humidity")
-                        
-                        print("humidity:\(humidity)")
                         
                         let pressure = (resultArray[index] as! NSDictionary).object(forKey: "pressure")
                         
-                        print("pressure:\(pressure)")
-                        
                         let windSpeed = (resultArray[index] as! NSDictionary).object(forKey: "windSpeed")
                         
-                        print("windSpeed:\(windSpeed)")
-                        
-                        let weathers = Weather(time:time as! Int,
+                    let weathers = Weather(time:time as! Int,
                                                summary: summary as! String,
                                                icon:icon as! String,
                                                temperatureMin:temperatureMin as! Double,
@@ -146,12 +119,6 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
                     self.weatherTableView.reloadData()
                     SVProgressHUD.dismiss()
                     
-                    //                
-                    //                self.loadUsersFollowDetail(){
-                    //                    self.setTable()
-                    //                    UIApplication.shared.endIgnoringInteractionEvents()
-                    //                    SVProgressHUD.dismiss()
-                    //                }
                 }
         }
 
@@ -184,12 +151,7 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
         
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as! WeatherTableViewCell
-        
-        //        if(cell == nil){
-        
-        //            cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell") as! WeatherTableViewCell
-        
-        //        }
+
         
         cell.dateLabel.text = changeUTCtoDate(UTCString: weather.time)
         
@@ -208,8 +170,7 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("you select cell\(indexPath.row)")
-        
+
         let indexPath = tableView.indexPathForSelectedRow!
         
         let cell = tableView.cellForRow(at: indexPath)! as UITableViewCell
@@ -217,16 +178,10 @@ class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDat
         var weather : Weather
         
         weather = self.data[indexPath.row] as! Weather
-        
-        
+
         performSegue(withIdentifier:"toDetail", sender: weather as Any)
-        
-        
-        
+   
     }
-    
-    
-    
     
     
     override func didReceiveMemoryWarning() {
